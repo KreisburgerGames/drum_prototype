@@ -10,6 +10,8 @@ using System;
 public class SoundGenerator : MonoBehaviour
 {
 
+    public static SoundGenerator instance;
+
     public string apiUrl = "https://api.elevenlabs.io/v1/sound-generation";
 
     public string apiKey = "sk_00cd41bb3bb4b5fcde268d4241c28baecad773dba553832e";
@@ -18,6 +20,11 @@ public class SoundGenerator : MonoBehaviour
 
     public string testDescription;
 
+
+    private void Awake()
+    {
+        instance = this;
+    }
 
     [ContextMenu("Test")]
     public void Test()
@@ -36,6 +43,10 @@ public class SoundGenerator : MonoBehaviour
         AudioSource.PlayClipAtPoint(audioClip, Vector3.zero, 1f);
     }
 
+    public static void GenerateSound(string text, Action<AudioClip> onResult)
+    {
+        instance.StartCoroutine(instance.GenerateSoundByte(text, onResult));
+    }
 
     IEnumerator GenerateSoundByte(string text, Action<AudioClip> onResult) 
     {
