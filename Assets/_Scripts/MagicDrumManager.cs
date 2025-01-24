@@ -26,7 +26,7 @@ public class MagicDrumManager : MonoBehaviour
         {
             string label = anchor.Label.ToString();
             Debug.Log("Generate audio for label " +  label);
-            SoundGenerator.GenerateSound(label, (result)=>anchor.GetComponentInChildren<Collider>().AddComponent<SoundCollider>().Setup(label, result));
+            SoundGenerator.GenerateSound(label, (result)=>anchor.GetComponentInChildren<Collider>().gameObject.AddComponent<SoundCollider>().Setup(label, result));
         }
     }
 
