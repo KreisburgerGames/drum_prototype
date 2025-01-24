@@ -45,6 +45,7 @@ public class SoundGenerator : MonoBehaviour
 
     public static void GenerateSound(string text, Action<AudioClip> onResult)
     {
+        string prompt = "One hit on a drum that sounds like a " + text;
         instance.StartCoroutine(instance.GenerateSoundByte(text, onResult));
     }
 

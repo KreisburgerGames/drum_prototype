@@ -24,7 +24,9 @@ public class MagicDrumManager : MonoBehaviour
         MRUKAnchor[] anchors = FindObjectsOfType<MRUKAnchor>();
         foreach (MRUKAnchor anchor in anchors)
         {
-            SoundGenerator.GenerateSound(anchor.Label.ToString(), (result)=>anchor.AddComponent<SoundCollider>().Setup(result));
+            string label = anchor.Label.ToString();
+            Debug.Log("Generate audio for label " +  label);
+            SoundGenerator.GenerateSound(label, (result)=>anchor.GetComponentInChildren<Collider>().AddComponent<SoundCollider>().Setup(label, result));
         }
     }
 
