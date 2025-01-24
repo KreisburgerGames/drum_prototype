@@ -82,7 +82,7 @@ public class SoundCollider : MonoBehaviour
         if (audio.isPlaying)
             return;
 
-        audio.Play();
+        audio.PlayOneShot(audio.clip, 1f);
 
         Debug.Log("Play clip for item " + name);
     }
