@@ -20,6 +20,10 @@ public class SoundGenerator : MonoBehaviour
 
     public string testDescription;
 
+    public string tag = "Fingertip";
+
+    public float velocity = 1f;
+
 
     private void Awake()
     {
@@ -35,7 +39,8 @@ public class SoundGenerator : MonoBehaviour
     [ContextMenu("Play")]
     public void Play()
     {
-        AudioSource.PlayClipAtPoint(testClip, Vector3.zero);
+        //AudioSource.PlayClipAtPoint(testClip, Vector3.zero);
+        SoundEffectManager.Play(testClip, tag, velocity);
     }
 
     public void TestAudioClip(AudioClip audioClip)

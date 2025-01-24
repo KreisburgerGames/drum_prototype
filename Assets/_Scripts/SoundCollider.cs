@@ -14,24 +14,24 @@ public class SoundCollider : MonoBehaviour
     private int sampleLength;
 
     Rigidbody rb;
-    AudioSource audio;
+    //AudioSource audio;
 
     // Start is called before the first frame update
     public void Setup(string title, AudioClip clip)
     {
         //rb = gameObject.AddComponent<Rigidbody>();
-        audio = gameObject.AddComponent<AudioSource>();
+        //audio = gameObject.AddComponent<AudioSource>();
 
         //rb.isKinematic = false;
         //rb.constraints = RigidbodyConstraints.FreezeAll;
-        audio.spatialBlend = 1f;
-        audio.playOnAwake = false;
-        audio.loop = false;
-        audio.clip = clip;
-        this.clip = clip;
+        //audio.spatialBlend = 1f;
+        //audio.playOnAwake = false;
+        //audio.loop = false;
+        //audio.clip = clip;
+        this.clip = TrimSilenceFromClip(clip);
         this.title = title;
 
-        audio.clip = TrimSilenceFromClip(audio.clip);
+        //audio.clip = 
     }
 
     public AudioClip TrimSilenceFromClip(AudioClip originalClip)
@@ -78,12 +78,18 @@ public class SoundCollider : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Detected collison for item " + name);
-        if (audio.isPlaying)
-            return;
+        Debug.Log("Detected collison for item " + name + " with " + collision.collider.name);
+        //if (audio.isPlaying)
+        //    return;
 
-        audio.PlayOneShot(audio.clip, 1f);
+        //audio.PlayOneShot(audio.clip, 1f);
 
-        Debug.Log("Play clip for item " + name);
+        if (collision.collider.TryGetComponent(out JointVelocity jv)) {
+
+
+            SoundEffectManager.Play(clip, collision.collider.tag, jv.velocity.magnitude);
+
+            Debug.Log("Play clip for item " + name);
+        }
     }
 }
