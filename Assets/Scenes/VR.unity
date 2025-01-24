@@ -363,9 +363,10 @@ GameObject:
   - component: {fileID: 32361729}
   - component: {fileID: 32361728}
   - component: {fileID: 32361727}
+  - component: {fileID: 32361730}
   m_Layer: 0
   m_Name: RightPalmCollider
-  m_TagString: Untagged
+  m_TagString: Palm
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -456,6 +457,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 32361725}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &32361730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 32361725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c7e6feb58859d84d835becede0c9144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &32584054
 GameObject:
   m_ObjectHideFlags: 0
@@ -2299,9 +2312,10 @@ GameObject:
   - component: {fileID: 192793747}
   - component: {fileID: 192793746}
   - component: {fileID: 192793745}
+  - component: {fileID: 192793748}
   m_Layer: 0
   m_Name: LeftMiddle
-  m_TagString: Untagged
+  m_TagString: Fingertip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2392,6 +2406,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 192793743}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &192793748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192793743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c7e6feb58859d84d835becede0c9144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &201225616
 GameObject:
   m_ObjectHideFlags: 0
@@ -2785,9 +2811,10 @@ GameObject:
   - component: {fileID: 236853591}
   - component: {fileID: 236853590}
   - component: {fileID: 236853589}
+  - component: {fileID: 236853592}
   m_Layer: 0
   m_Name: RightMiddleKnuckle
-  m_TagString: Untagged
+  m_TagString: Knuckle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2878,6 +2905,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 236853587}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &236853592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236853587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c7e6feb58859d84d835becede0c9144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &238577279
 GameObject:
   m_ObjectHideFlags: 0
@@ -4301,9 +4340,10 @@ GameObject:
   - component: {fileID: 393024913}
   - component: {fileID: 393024912}
   - component: {fileID: 393024911}
+  - component: {fileID: 393024914}
   m_Layer: 0
   m_Name: RightIndex
-  m_TagString: Untagged
+  m_TagString: Fingertip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4394,6 +4434,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 393024909}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &393024914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393024909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c7e6feb58859d84d835becede0c9144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &393228228
 GameObject:
   m_ObjectHideFlags: 0
@@ -4593,9 +4645,10 @@ GameObject:
   - component: {fileID: 420581724}
   - component: {fileID: 420581723}
   - component: {fileID: 420581722}
+  - component: {fileID: 420581725}
   m_Layer: 0
   m_Name: LeftMiddleKnuckle
-  m_TagString: Untagged
+  m_TagString: Knuckle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4686,6 +4739,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 420581720}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &420581725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 420581720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c7e6feb58859d84d835becede0c9144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &422708332
 GameObject:
   m_ObjectHideFlags: 0
@@ -5782,9 +5847,10 @@ GameObject:
   - component: {fileID: 481661442}
   - component: {fileID: 481661441}
   - component: {fileID: 481661440}
+  - component: {fileID: 481661443}
   m_Layer: 0
   m_Name: LeftIndex
-  m_TagString: Untagged
+  m_TagString: Fingertip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5875,6 +5941,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 481661438}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &481661443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481661438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c7e6feb58859d84d835becede0c9144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &484392335
 GameObject:
   m_ObjectHideFlags: 0
@@ -7139,9 +7217,10 @@ GameObject:
   - component: {fileID: 641492995}
   - component: {fileID: 641492994}
   - component: {fileID: 641492993}
+  - component: {fileID: 641492996}
   m_Layer: 0
   m_Name: RightRing
-  m_TagString: Untagged
+  m_TagString: Fingertip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7232,6 +7311,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 641492991}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &641492996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641492991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c7e6feb58859d84d835becede0c9144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &641937765
 GameObject:
   m_ObjectHideFlags: 0
@@ -7692,9 +7783,10 @@ GameObject:
   - component: {fileID: 672498198}
   - component: {fileID: 672498197}
   - component: {fileID: 672498196}
+  - component: {fileID: 672498199}
   m_Layer: 0
   m_Name: LeftThumb
-  m_TagString: Untagged
+  m_TagString: Fingertip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7785,6 +7877,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 672498194}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &672498199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672498194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c7e6feb58859d84d835becede0c9144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &681669865
 GameObject:
   m_ObjectHideFlags: 0
@@ -8490,9 +8594,10 @@ GameObject:
   - component: {fileID: 722795117}
   - component: {fileID: 722795116}
   - component: {fileID: 722795115}
+  - component: {fileID: 722795118}
   m_Layer: 0
   m_Name: LeftLittle
-  m_TagString: Untagged
+  m_TagString: Fingertip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8583,6 +8688,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 722795113}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &722795118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722795113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c7e6feb58859d84d835becede0c9144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &723404074
 GameObject:
   m_ObjectHideFlags: 0
@@ -9704,8 +9821,7 @@ MonoBehaviour:
   rightMiddleKnuckle: {fileID: 236853587}
   rightRingKnuckle: {fileID: 1646833407}
   rightLittleKnuckle: {fileID: 1716309279}
-  leftHandOffset: {x: 0, y: -0.025, z: 0}
-  rightHandOffset: {x: 0, y: -0.025, z: 0}
+  palmOffset: {x: 0, y: -0.025, z: 0}
   knuckleOffset: {x: 0, y: 0.003, z: 0}
 --- !u!4 &838208336
 Transform:
@@ -10304,9 +10420,10 @@ GameObject:
   - component: {fileID: 915238415}
   - component: {fileID: 915238414}
   - component: {fileID: 915238413}
+  - component: {fileID: 915238416}
   m_Layer: 0
   m_Name: RightLittle
-  m_TagString: Untagged
+  m_TagString: Fingertip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10397,6 +10514,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 915238411}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &915238416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915238411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c7e6feb58859d84d835becede0c9144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &917537885
 GameObject:
   m_ObjectHideFlags: 0
@@ -11710,9 +11839,10 @@ GameObject:
   - component: {fileID: 1010294648}
   - component: {fileID: 1010294647}
   - component: {fileID: 1010294646}
+  - component: {fileID: 1010294649}
   m_Layer: 0
   m_Name: LeftRing
-  m_TagString: Untagged
+  m_TagString: Fingertip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11803,6 +11933,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1010294644}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1010294649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010294644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c7e6feb58859d84d835becede0c9144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1013423893
 GameObject:
   m_ObjectHideFlags: 0
@@ -12630,9 +12772,10 @@ GameObject:
   - component: {fileID: 1112021271}
   - component: {fileID: 1112021270}
   - component: {fileID: 1112021269}
+  - component: {fileID: 1112021272}
   m_Layer: 0
   m_Name: RightMiddle
-  m_TagString: Untagged
+  m_TagString: Fingertip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12723,6 +12866,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1112021267}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1112021272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112021267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c7e6feb58859d84d835becede0c9144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1113636537
 GameObject:
   m_ObjectHideFlags: 0
@@ -15225,9 +15380,10 @@ GameObject:
   - component: {fileID: 1283593111}
   - component: {fileID: 1283593110}
   - component: {fileID: 1283593109}
+  - component: {fileID: 1283593112}
   m_Layer: 0
   m_Name: LeftLittleKnuckle
-  m_TagString: Untagged
+  m_TagString: Knuckle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15318,6 +15474,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1283593107}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1283593112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283593107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c7e6feb58859d84d835becede0c9144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1284136621
 GameObject:
   m_ObjectHideFlags: 0
@@ -16116,9 +16284,10 @@ GameObject:
   - component: {fileID: 1388627004}
   - component: {fileID: 1388627003}
   - component: {fileID: 1388627002}
+  - component: {fileID: 1388627005}
   m_Layer: 0
   m_Name: RightThumb
-  m_TagString: Untagged
+  m_TagString: Fingertip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16209,6 +16378,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1388627000}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1388627005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388627000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c7e6feb58859d84d835becede0c9144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1395604347
 GameObject:
   m_ObjectHideFlags: 0
@@ -16532,9 +16713,10 @@ GameObject:
   - component: {fileID: 1420651241}
   - component: {fileID: 1420651240}
   - component: {fileID: 1420651239}
+  - component: {fileID: 1420651242}
   m_Layer: 0
   m_Name: RightIndexKnuckle
-  m_TagString: Untagged
+  m_TagString: Knuckle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16625,6 +16807,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1420651237}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1420651242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420651237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c7e6feb58859d84d835becede0c9144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1422050355
 GameObject:
   m_ObjectHideFlags: 0
@@ -17383,9 +17577,10 @@ GameObject:
   - component: {fileID: 1452900077}
   - component: {fileID: 1452900076}
   - component: {fileID: 1452900075}
+  - component: {fileID: 1452900078}
   m_Layer: 0
   m_Name: LeftPalmCollider
-  m_TagString: Untagged
+  m_TagString: Palm
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17476,6 +17671,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1452900073}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1452900078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452900073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c7e6feb58859d84d835becede0c9144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1454091626
 GameObject:
   m_ObjectHideFlags: 0
@@ -17818,9 +18025,10 @@ GameObject:
   - component: {fileID: 1493499355}
   - component: {fileID: 1493499354}
   - component: {fileID: 1493499353}
+  - component: {fileID: 1493499356}
   m_Layer: 0
   m_Name: LeftRingKnuckle
-  m_TagString: Untagged
+  m_TagString: Knuckle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17911,6 +18119,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1493499351}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1493499356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493499351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c7e6feb58859d84d835becede0c9144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1494787453
 GameObject:
   m_ObjectHideFlags: 0
@@ -19693,9 +19913,10 @@ GameObject:
   - component: {fileID: 1646833411}
   - component: {fileID: 1646833410}
   - component: {fileID: 1646833409}
+  - component: {fileID: 1646833412}
   m_Layer: 0
   m_Name: RightRingKnuckle
-  m_TagString: Untagged
+  m_TagString: Knuckle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19786,6 +20007,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1646833407}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1646833412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646833407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c7e6feb58859d84d835becede0c9144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1647648657
 GameObject:
   m_ObjectHideFlags: 0
@@ -20437,9 +20670,10 @@ GameObject:
   - component: {fileID: 1716309283}
   - component: {fileID: 1716309282}
   - component: {fileID: 1716309281}
+  - component: {fileID: 1716309284}
   m_Layer: 0
   m_Name: RightLittleKnuckle
-  m_TagString: Untagged
+  m_TagString: Knuckle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20530,6 +20764,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1716309279}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1716309284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716309279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c7e6feb58859d84d835becede0c9144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1716825310
 GameObject:
   m_ObjectHideFlags: 0
@@ -24005,9 +24251,10 @@ GameObject:
   - component: {fileID: 2015184663}
   - component: {fileID: 2015184662}
   - component: {fileID: 2015184661}
+  - component: {fileID: 2015184664}
   m_Layer: 0
   m_Name: LeftIndexKnuckle
-  m_TagString: Untagged
+  m_TagString: Knuckle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24098,6 +24345,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2015184659}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2015184664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015184659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c7e6feb58859d84d835becede0c9144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2018905166
 GameObject:
   m_ObjectHideFlags: 0
