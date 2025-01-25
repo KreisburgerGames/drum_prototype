@@ -160,6 +160,18 @@ public class WaitForHand : MonoBehaviour
         }
 
         // Disable script one colliders are ready
+        StartCheckColliders();
+    }
+
+    private void StartCheckColliders()
+    {
+        StartCoroutine(CheckColliders());
+    }
+
+    private IEnumerator CheckColliders()
+    {
         if(GetComponentsInChildren<Transform>().Length == 1) enabled = false;
+        yield return new WaitForSeconds(1f);
+        StartCheckColliders();
     }
 }
