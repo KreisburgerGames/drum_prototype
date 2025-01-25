@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class NarratorController : MonoBehaviour
@@ -12,6 +13,7 @@ public class NarratorController : MonoBehaviour
 
     public AudioSource voiceover;
 
+    [SerializeReference, SubclassSelector]
     public INarratorAction[] actions;
 
 
@@ -56,11 +58,21 @@ public class NarratorSpeakAction : INarratorAction
 
     public IEnumerator DoAction(NarratorController controller)
     {
+        SubtitleController.instance.Show(subtitle);
         controller.character.SetBool("IsTalking", true);
-        controller.voiceover.clip = voiceover;
-        controller.voiceover.Play();
-        yield return new WaitWhile(()=>controller.voiceover.isPlaying);
+        if (voiceover != null)
+        {
+            controller.voiceover.clip = voiceover;
+            controller.voiceover.Play();
+            yield return new WaitWhile(() => controller.voiceover.isPlaying);
+        }
+        else
+        {
+            yield return new WaitForSeconds(3f);
+        }
         controller.character.SetBool("IsTalking", false);
+        SubtitleController.instance.Hide();
+        yield return new WaitForSeconds(0.5f);
     }
 }
 
@@ -82,11 +94,61 @@ public class NarratorSetDanceAction : INarratorAction
 public class NarratorWaitForRecordAction : INarratorAction
 {
 
+    public INarratorAction idleAction;
+    public float idleTime;
+
+    public bool assertIsRecording;
+
 
     public IEnumerator DoAction(NarratorController controller)
     {
-        yield return new WaitUntil(() => LoopManager._isRecording);
-        yield return new WaitWhile(() => LoopManager._isRecording);
+        //yield return new WaitUntil(() => LoopManager._isRecording);
+        //yield return new WaitWhile(() => LoopManager._isRecording);
+        float time = 0;
+        while (LoopManager._isRecording != assertIsRecording)
+        {
+            if(time > idleTime)
+            {
+                yield return idleAction.DoAction(controller);
+                time = 0;
+            }
+            time += Time.deltaTime;
+            yield return null;
+        }
+    }
+}
+
+[System.Serializable]
+public class NarratorWaitForCollisionAction : INarratorAction
+{
+
+    public INarratorAction idleAction;
+    public float idleTime;
+
+    //public bool assertIsRecording;
+    bool hasCollided = false;
+
+    public IEnumerator DoAction(NarratorController controller)
+    {
+        SoundCollider.OnSoundCollisionEvent += OnCollision;
+        hasCollided = false;
+        float time = 0;
+        while (hasCollided == false)
+        {
+            if (time > idleTime)
+            {
+                yield return idleAction.DoAction(controller);
+                time = 0;
+            }
+            time += Time.deltaTime;
+            yield return null;
+        }
+        SoundCollider.OnSoundCollisionEvent -= OnCollision;
+    }
+
+    private void OnCollision(SoundCollisionEvent @event)
+    {
+        hasCollided = true;
     }
 }
 
