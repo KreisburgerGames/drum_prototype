@@ -158,5 +158,8 @@ public class WaitForHand : MonoBehaviour
             rightLittleKnuckle.transform.localEulerAngles = Vector3.zero;
             isRightLittleKnuckleInit = true;
         }
+
+        // Disable script one colliders are ready
+        if(GetComponentsInChildren<Transform>().Length == 1) enabled = false;
     }
 }
