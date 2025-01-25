@@ -13,9 +13,201 @@ MonoBehaviour:
   m_Name: NarratorData
   m_EditorClassIdentifier: 
   actions:
-  - rid: -2
+  - rid: 6135686683664842770
+  - rid: 6135686683664842771
+  - rid: 6135686683664842772
+  - rid: 6135686683664842774
+  - rid: 6135686683664842775
+  - rid: 6135686683664842773
+  - rid: 6135686683664842776
+  - rid: 6135686683664842777
+  - rid: 6135686683664842778
+  - rid: 6135686683664842779
+  - rid: 6135686683664842781
+  - rid: 6135686683664842783
+  - rid: 6135686683664842782
+  - rid: 6135686683664842784
+  - rid: 6135686683664842785
+  - rid: 6135686683664842786
+  - rid: 6135686683664842787
+  - rid: 6135686683664842788
+  - rid: 6135686683664842789
+  - rid: 6135686683664842790
+  - rid: 6135686683664842791
+  - rid: 6135686683664842792
+  - rid: 6135686683664842793
+  - rid: 6135686683664842794
+  - rid: 6135686683664842795
+  - rid: 6135686683664842796
+  - rid: 6135686683664842797
+  - rid: 6135686683664842798
+  - rid: 6135686683664842799
+  - rid: 6135686683664842800
   references:
     version: 2
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
+    - rid: 6135686683664842770
+      type: {class: NarratorWaitForSecondsAction, ns: , asm: Assembly-CSharp}
+      data:
+        seconds: 3
+    - rid: 6135686683664842771
+      type: {class: NarratorSpeakAction, ns: , asm: Assembly-CSharp}
+      data:
+        subtitle: "Welcome, dreamer! I\u2019m R\xEAvera, your guide to unlocking
+          the hidden music of your world."
+        voiceover: {fileID: 8300000, guid: 81bf4d1ec4f949843a2c5270dab4b780, type: 3}
+    - rid: 6135686683664842772
+      type: {class: NarratorSpeakAction, ns: , asm: Assembly-CSharp}
+      data:
+        subtitle: "Your space is alive with rhythm, melody, and harmony\u2014waiting
+          for you to bring it to life."
+        voiceover: {fileID: 8300000, guid: a0e67c20e11218f46b6cb32f31d0539e, type: 3}
+    - rid: 6135686683664842773
+      type: {class: NarratorSpeakAction, ns: , asm: Assembly-CSharp}
+      data:
+        subtitle: Are you ready to discover the sound of your surroundings?
+        voiceover: {fileID: 8300000, guid: 0c9740a7b72a5984f8b5961014d56287, type: 3}
+    - rid: 6135686683664842774
+      type: {class: NarratorSpeakAction, ns: , asm: Assembly-CSharp}
+      data:
+        subtitle: 'Before we begin, remember this: a clear space brings clear sounds.'
+        voiceover: {fileID: 8300000, guid: 8ff59731e6db73f468231fbd418a8bc9, type: 3}
+    - rid: 6135686683664842775
+      type: {class: NarratorSpeakAction, ns: , asm: Assembly-CSharp}
+      data:
+        subtitle: Tidy up your surroundings so the musical magic can flow freely
+          and your symphony can truly shine!
+        voiceover: {fileID: 8300000, guid: b3ba4861b9516a241ab609d7ad0418e2, type: 3}
+    - rid: 6135686683664842776
+      type: {class: NarratorWaitForSecondsAction, ns: , asm: Assembly-CSharp}
+      data:
+        seconds: 1
+    - rid: 6135686683664842777
+      type: {class: NarratorSpeakAction, ns: , asm: Assembly-CSharp}
+      data:
+        subtitle: Every corner of your space holds its own melody.
+        voiceover: {fileID: 8300000, guid: a1ee5578617c26949977ce44fa66fb6c, type: 3}
+    - rid: 6135686683664842778
+      type: {class: NarratorSpeakAction, ns: , asm: Assembly-CSharp}
+      data:
+        subtitle: "Let\u2019s awaken it together. Tap any glowing object to begin
+          your journey."
+        voiceover: {fileID: 8300000, guid: e27053e610576974e8d006ccabffebdd, type: 3}
+    - rid: 6135686683664842779
+      type: {class: NarratorWaitForCollisionAction, ns: , asm: Assembly-CSharp}
+      data:
+        idleAction:
+          rid: 6135686683664842780
+        idleTime: 10
+    - rid: 6135686683664842780
+      type: {class: NarratorSpeakAction, ns: , asm: Assembly-CSharp}
+      data:
+        subtitle: "The first step is always the hardest, but it\u2019s also the most
+          exciting!"
+        voiceover: {fileID: 0}
+    - rid: 6135686683664842781
+      type: {class: NarratorSpeakAction, ns: , asm: Assembly-CSharp}
+      data:
+        subtitle: "Each tap will produce a sound\u2014it\u2019s up to you to create
+          your own rhythm."
+        voiceover: {fileID: 8300000, guid: 528af9031cd4d10498205a3c37ec814f, type: 3}
+    - rid: 6135686683664842782
+      type: {class: NarratorWaitForCollisionAction, ns: , asm: Assembly-CSharp}
+      data:
+        idleAction:
+          rid: -2
+        idleTime: 10
+    - rid: 6135686683664842783
+      type: {class: NarratorSetDanceAction, ns: , asm: Assembly-CSharp}
+      data:
+        isDancing: 1
+    - rid: 6135686683664842784
+      type: {class: NarratorWaitForSecondsAction, ns: , asm: Assembly-CSharp}
+      data:
+        seconds: 3
+    - rid: 6135686683664842785
+      type: {class: NarratorSetDanceAction, ns: , asm: Assembly-CSharp}
+      data:
+        isDancing: 0
+    - rid: 6135686683664842786
+      type: {class: NarratorSpeakAction, ns: , asm: Assembly-CSharp}
+      data:
+        subtitle: Wonderful! That sound is the beginning of your symphony.
+        voiceover: {fileID: 8300000, guid: 1305efe81adb2c24aa098caadd5a73f8, type: 3}
+    - rid: 6135686683664842787
+      type: {class: NarratorSpeakAction, ns: , asm: Assembly-CSharp}
+      data:
+        subtitle: "Once you\u2019ve found a rhythm you like, tap the glowing record
+          icon to capture it"
+        voiceover: {fileID: 8300000, guid: c54ae4c636b7acd47b97c5909efef994, type: 3}
+    - rid: 6135686683664842788
+      type: {class: NarratorSpeakAction, ns: , asm: Assembly-CSharp}
+      data:
+        subtitle: When ready, tap the playback icon to hear your creation.
+        voiceover: {fileID: 8300000, guid: 23b1605fda372e44f9760c106974519e, type: 3}
+    - rid: 6135686683664842789
+      type: {class: NarratorSpeakAction, ns: , asm: Assembly-CSharp}
+      data:
+        subtitle: "Don\u2019t worry, you can always re-record and perfect your loop."
+        voiceover: {fileID: 8300000, guid: d6fec353666d8004f88b08de86865c76, type: 3}
+    - rid: 6135686683664842790
+      type: {class: NarratorWaitForRecordAction, ns: , asm: Assembly-CSharp}
+      data:
+        idleAction:
+          rid: -2
+        idleTime: 10
+        assertIsRecording: 1
+    - rid: 6135686683664842791
+      type: {class: NarratorSetDanceAction, ns: , asm: Assembly-CSharp}
+      data:
+        isDancing: 1
+    - rid: 6135686683664842792
+      type: {class: NarratorWaitForRecordAction, ns: , asm: Assembly-CSharp}
+      data:
+        idleAction:
+          rid: -2
+        idleTime: 10
+        assertIsRecording: 0
+    - rid: 6135686683664842793
+      type: {class: NarratorSetDanceAction, ns: , asm: Assembly-CSharp}
+      data:
+        isDancing: 0
+    - rid: 6135686683664842794
+      type: {class: NarratorSpeakAction, ns: , asm: Assembly-CSharp}
+      data:
+        subtitle: "Great job! You\u2019ve made your first loop."
+        voiceover: {fileID: 8300000, guid: f8af4f63f5a1667438bd54e07b7b6f9f, type: 3}
+    - rid: 6135686683664842795
+      type: {class: NarratorSpeakAction, ns: , asm: Assembly-CSharp}
+      data:
+        subtitle: "Now, let\u2019s keep exploring. Move on to another glowing object
+          to add new sounds and build your symphony."
+        voiceover: {fileID: 8300000, guid: 2eda92ee88a11d64dbcbaf28d2573002, type: 3}
+    - rid: 6135686683664842796
+      type: {class: NarratorWaitForCollisionAction, ns: , asm: Assembly-CSharp}
+      data:
+        idleAction:
+          rid: -2
+        idleTime: 10
+    - rid: 6135686683664842797
+      type: {class: NarratorSpeakAction, ns: , asm: Assembly-CSharp}
+      data:
+        subtitle: Your symphony is growing!
+        voiceover: {fileID: 8300000, guid: a8f3f582c5760eb4c96d8e1f60fbd206, type: 3}
+    - rid: 6135686683664842798
+      type: {class: NarratorSpeakAction, ns: , asm: Assembly-CSharp}
+      data:
+        subtitle: Try experimenting with different objects and see how they blend
+          with your loop.
+        voiceover: {fileID: 8300000, guid: c5e19369949c0d241b2b393926347179, type: 3}
+    - rid: 6135686683664842799
+      type: {class: NarratorSpeakAction, ns: , asm: Assembly-CSharp}
+      data:
+        subtitle: The possibilities are endless.
+        voiceover: {fileID: 8300000, guid: 8d2aec6c354726b4cac2d6d86fd92468, type: 3}
+    - rid: 6135686683664842800
+      type: {class: NarratorSetDanceAction, ns: , asm: Assembly-CSharp}
+      data:
+        isDancing: 1

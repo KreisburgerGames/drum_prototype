@@ -15,8 +15,6 @@ public class NarratorController : MonoBehaviour
 
     public NarratorData data;
 
-    bool IsFocused;
-    bool IsPlaying;
 
 
     private void Awake()
@@ -36,22 +34,12 @@ public class NarratorController : MonoBehaviour
 
     IEnumerator PlayActions()
     {
-        yield return new WaitUntil(()=>IsPlaying && IsFocused);
         foreach(var action in data.actions)
         {
             yield return action.DoAction(this);
         }
     }
 
-    private void OnApplicationFocus(bool focus)
-    {
-        IsFocused = focus;
-    }
-
-    private void OnApplicationPause(bool pause)
-    {
-        IsPlaying = !pause;
-    }
 
 }
 
