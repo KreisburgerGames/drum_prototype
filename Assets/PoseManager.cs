@@ -15,8 +15,7 @@ public class PoseManager : MonoBehaviour
         Palm,
         None
     }
-
-    void Start()
+    public void InitHands()
     {
         ResetLeft();
         ResetRight();

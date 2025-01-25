@@ -170,7 +170,12 @@ public class WaitForHand : MonoBehaviour
 
     private IEnumerator CheckColliders()
     {
-        if(GetComponentsInChildren<Transform>().Length == 1) enabled = false;
+        if(GetComponentsInChildren<Transform>().Length == 1)
+        {
+            FindFirstObjectByType<PoseManager>().InitHands();
+            Destroy(gameObject);
+        }
+        
         yield return new WaitForSeconds(1f);
         StartCheckColliders();
     }
