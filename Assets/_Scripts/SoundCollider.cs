@@ -110,7 +110,7 @@ public class SoundCollider : MonoBehaviour
 
             float velocity = jv.velocity.magnitude;
 
-            if (velocity < 0.5f)
+            if (velocity < 0.1f)
                 return;
 
             SoundEffectManager.Play(clip, collision.collider.tag, velocity, collision.GetContact(0).point);
