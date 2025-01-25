@@ -33,43 +33,48 @@ public class LoopManager : MonoBehaviour
         SoundCollider.OnSoundCollisionEvent -= OnSoundCollision;
     }
 
-    public void StartRecording()
+    public void StartRecording(int index)
     {
         if (_isRecording)
             return;
 
+        if (loops[index] != null && loops[index].isPlaying)
+            loops[index].Stop();
+
         _isRecording = true;
         activeLoop = new RecordLoopTimeline();
+        OnStartRecording?.Invoke(index);
         Debug.Log("Start recordng");
     }
 
-    public void StopRecording()
-    {
-        _isRecording = false;
+    //public void StopRecording()
+    //{
+    //    _isRecording = false;
 
-        loops.Add(activeLoop);
-        Debug.Log("Stop recording");
-    }
+    //    loops.Add(activeLoop);
+    //    Debug.Log("Stop recording");
+    //}
 
     public void StopRecording(int index)
     {
         _isRecording = false;
 
         loops[index] = activeLoop;
+        OnStopRecording?.Invoke(index);
         Debug.Log("Stop recording");
     }
 
-    public void ToggleRecording()
-    {
-        if(_isRecording)
-        {
-            StopRecording();
-        }
-        else
-        {
-            StartRecording();
-        }
-    }
+    //public void ToggleRecording()
+    //{
+    //    if(_isRecording)
+    //    {
+    //        StopRecording();
+    //    }
+    //    else
+    //    {
+    //        StartRecording();
+    //    }
+    //}
 
     public void ToggleRecording(int index)
     {
@@ -79,7 +84,7 @@ public class LoopManager : MonoBehaviour
         }
         else
         {
-            StartRecording();
+            StartRecording(index);
         }
     }
 
@@ -89,10 +94,12 @@ public class LoopManager : MonoBehaviour
         if (timeline.isPlaying)
         {
             timeline.Stop();
+            OnStopPlayback?.Invoke(index);
         }
         else
         {
             timeline.Play();
+            OnStartPlayback?.Invoke(index);
         }
     }
 
