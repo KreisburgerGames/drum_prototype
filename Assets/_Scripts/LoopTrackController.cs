@@ -10,6 +10,8 @@ public class LoopTrackController : MonoBehaviour
 
     public PokeInteractable recordButton, playButton;
 
+    public GameObject stopRecordIcon;
+
     public int index;
 
     // Start is called before the first frame update
@@ -34,6 +36,7 @@ public class LoopTrackController : MonoBehaviour
     void Setup()
     {
         playButton.gameObject.SetActive(false);
+        stopRecordIcon.gameObject.SetActive(false);
     }
 
     private void OnStartPlayback(int obj)
@@ -54,7 +57,8 @@ public class LoopTrackController : MonoBehaviour
     {
         if(obj == index)
         {
-            recordButton.GetComponentInChildren<TMP_Text>().text = "[]";
+            //recordButton.GetComponentInChildren<TMP_Text>().text = "[]";
+            stopRecordIcon.SetActive(true);
             playButton.gameObject.SetActive(false);
         }
         else
@@ -67,7 +71,8 @@ public class LoopTrackController : MonoBehaviour
     {
         if (obj == index)
         {
-            recordButton.GetComponentInChildren<TMP_Text>().text = "O";
+            //recordButton.GetComponentInChildren<TMP_Text>().text = "O";
+            stopRecordIcon.SetActive(false);
             playButton.gameObject.SetActive(true);
         }
         else
