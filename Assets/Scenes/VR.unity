@@ -27441,6 +27441,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Narrator
       objectReference: {fileID: 0}
+    - target: {fileID: 1922638675892893070, guid: a1d0d9b4267ff5843b63f13567f8675e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5839845612694902222, guid: a1d0d9b4267ff5843b63f13567f8675e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
