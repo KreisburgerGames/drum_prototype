@@ -13,8 +13,7 @@ public class NarratorController : MonoBehaviour
 
     public AudioSource voiceover;
 
-    [SerializeReference, SubclassSelector]
-    public INarratorAction[] actions;
+    public NarratorData data;
 
     bool IsFocused;
     bool IsPlaying;
@@ -38,7 +37,7 @@ public class NarratorController : MonoBehaviour
     IEnumerator PlayActions()
     {
         yield return new WaitUntil(()=>IsPlaying && IsFocused);
-        foreach(var action in actions)
+        foreach(var action in data.actions)
         {
             yield return action.DoAction(this);
         }
