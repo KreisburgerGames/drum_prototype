@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: NarratorData
   m_EditorClassIdentifier: 
   actions:
-  - rid: 6135686683664842770
   - rid: 6135686683664842771
   - rid: 6135686683664842772
   - rid: 6135686683664842774
@@ -48,10 +47,6 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 6135686683664842770
-      type: {class: NarratorWaitForSecondsAction, ns: , asm: Assembly-CSharp}
-      data:
-        seconds: 3
     - rid: 6135686683664842771
       type: {class: NarratorSpeakAction, ns: , asm: Assembly-CSharp}
       data:

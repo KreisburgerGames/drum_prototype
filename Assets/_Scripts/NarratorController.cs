@@ -15,20 +15,28 @@ public class NarratorController : MonoBehaviour
 
     public NarratorData data;
 
-
+    public bool isStarted;
 
     private void Awake()
     {
         Instance = this;
-        character.gameObject.SetActive(false);
+        //character.gameObject.SetActive(false);
         MagicDrumManager.OnRoomSetupComplete += OnRoomSetupComplete;
+        gameObject.SetActive(false);
     }
 
     private void OnRoomSetupComplete()
     {
         MagicDrumManager.OnRoomSetupComplete -= OnRoomSetupComplete;
-        character.gameObject.SetActive(true);
-        StartCoroutine(PlayActions());
+        //character.gameObject.SetActive(true);
+        isStarted = true;
+        if(gameObject.activeSelf)StartCoroutine(PlayActions());
+    }
+
+    private void OnEnable()
+    {
+        if(isStarted)
+            StartCoroutine(PlayActions());
     }
 
 
