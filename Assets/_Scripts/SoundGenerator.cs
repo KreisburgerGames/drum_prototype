@@ -40,7 +40,7 @@ public class SoundGenerator : MonoBehaviour
     public void Play()
     {
         //AudioSource.PlayClipAtPoint(testClip, Vector3.zero);
-        SoundEffectManager.Play(testClip, tag, velocity);
+        SoundEffectManager.Play(testClip, tag, velocity, Vector3.zero);
     }
 
     public void TestAudioClip(AudioClip audioClip)
