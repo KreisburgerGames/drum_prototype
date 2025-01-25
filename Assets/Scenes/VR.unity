@@ -20927,8 +20927,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 381162418}
-  poolSize: 10
-  maxVelocity: 10
+  poolSize: 30
+  maxVelocity: 2
 --- !u!4 &1714848820 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7112871533574526145, guid: e7d559d004caec34b8a85877e95f5e74, type: 3}
