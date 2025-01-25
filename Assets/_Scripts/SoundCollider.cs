@@ -57,15 +57,7 @@ public class SoundCollider : MonoBehaviour
             }
         }
 
-        // Find the end index (last non-zero sample)
-        for (int i = audioData.Length - 1; i >= 0; i--)
-        {
-            if (Mathf.Abs(audioData[i]) > 0.1f)  // Adjust the threshold to detect silence
-            {
-                endIndex = i;
-                break;
-            }
-        }
+        endIndex = audioData.Length - 1;
 
         // Calculate the new length after trimming
         int newSampleLength = endIndex - startIndex + 1;
