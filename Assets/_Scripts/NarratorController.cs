@@ -16,6 +16,9 @@ public class NarratorController : MonoBehaviour
     [SerializeReference, SubclassSelector]
     public INarratorAction[] actions;
 
+    bool IsFocused;
+    bool IsPlaying;
+
 
     private void Awake()
     {
@@ -34,12 +37,23 @@ public class NarratorController : MonoBehaviour
 
     IEnumerator PlayActions()
     {
+        yield return new WaitUntil(()=>IsPlaying && IsFocused);
         foreach(var action in actions)
         {
             yield return action.DoAction(this);
         }
     }
-    
+
+    private void OnApplicationFocus(bool focus)
+    {
+        IsFocused = focus;
+    }
+
+    private void OnApplicationPause(bool pause)
+    {
+        IsPlaying = !pause;
+    }
+
 }
 
 public interface INarratorAction
