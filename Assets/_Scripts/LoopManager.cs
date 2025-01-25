@@ -9,17 +9,23 @@ using UnityEngine.LowLevel;
 public class LoopManager : MonoBehaviour
 {
 
+    public static Action<int> OnStartRecording, OnStopRecording, OnStartPlayback, OnStopPlayback;
 
     bool _isRecording;
 
-    List<RecordLoopTimeline> loops = new List<RecordLoopTimeline>();
+    List<RecordLoopTimeline> loops = new List<RecordLoopTimeline>(4);
 
     RecordLoopTimeline activeLoop;
 
     // Start is called before the first frame update
     void Start()
     {
-        SoundCollider.OnSoundCollisionEvent += OnSoundCollision; 
+        SoundCollider.OnSoundCollisionEvent += OnSoundCollision;
+        loops = new List<RecordLoopTimeline>(4);
+        for (int i = 0; i < 4; i++)
+        {
+            loops.Add(null);
+        }
     }
 
     private void OnDestroy()
@@ -29,15 +35,65 @@ public class LoopManager : MonoBehaviour
 
     public void StartRecording()
     {
+        if (_isRecording)
+            return;
+
         _isRecording = true;
         activeLoop = new RecordLoopTimeline();
+        Debug.Log("Start recordng");
     }
 
-    public void StopRecordinig()
+    public void StopRecording()
     {
         _isRecording = false;
 
         loops.Add(activeLoop);
+        Debug.Log("Stop recording");
+    }
+
+    public void StopRecording(int index)
+    {
+        _isRecording = false;
+
+        loops[index] = activeLoop;
+        Debug.Log("Stop recording");
+    }
+
+    public void ToggleRecording()
+    {
+        if(_isRecording)
+        {
+            StopRecording();
+        }
+        else
+        {
+            StartRecording();
+        }
+    }
+
+    public void ToggleRecording(int index)
+    {
+        if (_isRecording)
+        {
+            StopRecording(index);
+        }
+        else
+        {
+            StartRecording();
+        }
+    }
+
+    public void TogglePlayback(int index)
+    {
+        RecordLoopTimeline timeline = loops[index];
+        if (timeline.isPlaying)
+        {
+            timeline.Stop();
+        }
+        else
+        {
+            timeline.Play();
+        }
     }
 
     private void OnSoundCollision(SoundCollisionEvent collision)
@@ -46,6 +102,7 @@ public class LoopManager : MonoBehaviour
             return;
 
         activeLoop.Add(collision);
+        Debug.Log("Record collision event " + collision.collider.name);
     }
 
     // Update is called once per frame
@@ -53,6 +110,7 @@ public class LoopManager : MonoBehaviour
     {
         foreach(var loop in loops)
         {
+            if(loop == null) continue;
             if (loop.isPlaying)
             {
                 loop.PlayLoop(Time.deltaTime);
@@ -74,17 +132,20 @@ public class RecordLoopTimeline
     public RecordLoopTimeline()
     {
         timeline = new List<RecordHistoryEvent>();
+        startTime = DateTime.Now;
     }
     
     public void Play()
     {
         RestartLoop();
         isPlaying = true;
+        Debug.Log("Start playing loop");
     } 
 
     public void Stop()
     {
         isPlaying = false;
+        Debug.Log("Stop playing loop");
     }
 
     public void Add(SoundCollisionEvent collision)
@@ -151,5 +212,6 @@ public class RecordHistoryEvent
     {
         hasPlayed = true;
         SoundEffectManager.Play(collision.collider.clip, collision.tag, collision.velocity, collision.position);
+        Debug.Log("Play record " + collision.collider.name);
     }
 }

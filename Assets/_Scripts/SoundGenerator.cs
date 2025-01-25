@@ -24,6 +24,8 @@ public class SoundGenerator : MonoBehaviour
 
     public float velocity = 1f;
 
+    public bool useDebug = true;
+
 
     private void Awake()
     {
@@ -51,7 +53,14 @@ public class SoundGenerator : MonoBehaviour
     public static void GenerateSound(string text, Action<AudioClip> onResult)
     {
         string prompt = "One hit on a drum that sounds like a " + text;
-        instance.StartCoroutine(instance.GenerateSoundByte(text, onResult));
+        if (instance.useDebug && Application.isEditor)
+        {
+            onResult?.Invoke(instance.testClip);
+        }
+        else
+        {
+            instance.StartCoroutine(instance.GenerateSoundByte(text, onResult));
+        }
     }
 
     IEnumerator GenerateSoundByte(string text, Action<AudioClip> onResult) 
