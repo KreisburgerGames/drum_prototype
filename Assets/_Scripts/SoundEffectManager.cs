@@ -45,17 +45,17 @@ public class SoundEffectManager : MonoBehaviour
         }
     }
 
-    public static void Play(AudioClip clip, string tag, float velocity)
+    public static void Play(AudioClip clip, string tag, float velocity, Vector3 positon)
     {
-        instance.PlayClip(clip, tag, velocity);
+        instance.PlayClip(clip, tag, velocity, positon);
     }
 
-    public void PlayClip(AudioClip clip, string tag, float velocity)
+    public void PlayClip(AudioClip clip, string tag, float velocity, Vector3 position)
     {
-        StartCoroutine(HandleAudioSource(clip, tag, velocity));
+        StartCoroutine(HandleAudioSource(clip, tag, velocity, position));
     }
 
-    IEnumerator HandleAudioSource(AudioClip clip, string tag, float velocity)
+    IEnumerator HandleAudioSource(AudioClip clip, string tag, float velocity, Vector3 position)
     {
         if (inactiveSource.Count == 0)
         {
@@ -64,6 +64,9 @@ public class SoundEffectManager : MonoBehaviour
         }
 
         AudioSource source = inactiveSource[0];
+
+        source.transform.position = position;
+
         source.clip = clip;
         switch (tag)
         {

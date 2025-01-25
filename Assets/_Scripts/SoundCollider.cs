@@ -91,7 +91,7 @@ public class SoundCollider : MonoBehaviour
         if (collision.collider.TryGetComponent(out JointVelocity jv)) {
 
 
-            SoundEffectManager.Play(clip, collision.collider.tag, jv.velocity.magnitude);
+            SoundEffectManager.Play(clip, collision.collider.tag, jv.velocity.magnitude, collision.GetContact(0).point);
 
             SoundCollisionEvent e = new SoundCollisionEvent()
             {
