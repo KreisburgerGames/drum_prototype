@@ -112,7 +112,8 @@ public class SoundCollider : MonoBehaviour
                 collider = this,
                 velocity = velocity,
                 tag = collision.collider.tag,
-                position = collision.GetContact(0).point
+                position = collision.GetContact(0).point,
+                obj = gameObject
             };
 
             OnCollision?.Invoke(e);
@@ -134,4 +135,5 @@ public class SoundCollisionEvent
     public float velocity;
     public string tag;
     public Vector3 position;
+    public GameObject obj;
 }

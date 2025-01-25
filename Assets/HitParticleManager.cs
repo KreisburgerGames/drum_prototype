@@ -29,8 +29,15 @@ public class HitParticleManager : MonoBehaviour
     {
         GameObject hitParticle = hitParticlesPool[currentIndex];
         hitParticle.SetActive(true);
+        RandomizeParticleColor(soundCollision.obj.GetComponentInChildren<ParticleSystem>());
         hitParticle.transform.position = soundCollision.position;
         currentIndex++;
         if(currentIndex > poolSize - 1) currentIndex = 0;
+    }
+
+    private void RandomizeParticleColor(ParticleSystem particleSystem)
+    {
+        Color color = Color.HSVToRGB(Random.Range(0.00f, 1.00f), 1f, 1f);
+        particleSystem.GetComponent<ParticleSystemRenderer>().material.color = color;
     }
 }

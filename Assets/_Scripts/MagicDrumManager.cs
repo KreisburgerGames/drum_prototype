@@ -39,6 +39,7 @@ public class MagicDrumManager : MonoBehaviour
 
             GameObject HOP = Instantiate(hittableObjectParticlePrefab);
             HOP.transform.position = anchor.GetComponentInChildren<MeshFilter>().gameObject.transform.position;
+            HOP.transform.SetParent(anchor.gameObject.GetComponentInChildren<MeshFilter>().gameObject.transform);
             anchor.GetComponentInChildren<MeshRenderer>().enabled = false;
             ParticleSystem ps = HOP.GetComponent<ParticleSystem>();
             var shape = ps.shape;
