@@ -7,6 +7,8 @@ public class JointVelocity : MonoBehaviour
     public Vector3 velocity { get; private set; }
     private Vector3 lastPos;
 
+    public bool isRightHand;
+
     void Update()
     {
         velocity = (lastPos - transform.position) / Time.deltaTime;

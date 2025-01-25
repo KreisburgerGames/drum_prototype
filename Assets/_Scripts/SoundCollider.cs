@@ -14,6 +14,7 @@ public class SoundCollider : MonoBehaviour
 
     public string title;
 
+    string rightTag, leftTag;
     
     private int sampleLength;
 
@@ -80,6 +81,12 @@ public class SoundCollider : MonoBehaviour
         return trimmedClip;
     }
 
+    //private void FixedUpdate()
+    //{
+    //    leftTag = null;
+    //    rightTag = null;
+    //}
+
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("Detected collison for item " + name + " with " + collision.collider.name);
@@ -89,6 +96,17 @@ public class SoundCollider : MonoBehaviour
         //audio.PlayOneShot(audio.clip, 1f);
 
         if (collision.collider.TryGetComponent(out JointVelocity jv)) {
+
+            //if(leftTag != null && jv.isRightHand == false)
+            //{
+            //    if (collision.collider.CompareTag(leftTag) == false)
+            //        return;
+            //}
+            //if (rightTag != null && jv.isRightHand == true)
+            //{
+            //    if (collision.collider.CompareTag(rightTag) == false)
+            //        return;
+            //}
 
             float velocity = jv.velocity.magnitude;
 
@@ -109,6 +127,11 @@ public class SoundCollider : MonoBehaviour
             OnSoundCollisionEvent?.Invoke(e);
 
             Debug.Log("Play clip for item " + name);
+
+            //if(jv.isRightHand)
+            //    rightTag = collision.collider.tag;
+            //else
+            //    leftTag = collision.collider.tag;
         }
     }
 }
