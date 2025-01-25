@@ -1,4 +1,5 @@
 using Meta.XR.MRUtilityKit;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -7,6 +8,8 @@ using UnityEngine;
 public class MagicDrumManager : MonoBehaviour
 {
     public GameObject hittableObjectParticlePrefab;
+
+    public static Action OnRoomSetupComplete;
 
 
     // Start is called before the first frame update
@@ -32,6 +35,8 @@ public class MagicDrumManager : MonoBehaviour
             HOP.transform.position = anchor.GetComponentInChildren<MeshFilter>().gameObject.transform.position;
             anchor.GetComponentInChildren<MeshRenderer>().enabled = false;
         }
+
+        OnRoomSetupComplete?.Invoke();
     }
 
 }

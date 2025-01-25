@@ -11,7 +11,7 @@ public class LoopManager : MonoBehaviour
 
     public static Action<int> OnStartRecording, OnStopRecording, OnStartPlayback, OnStopPlayback;
 
-    bool _isRecording;
+    public static bool _isRecording;
 
     List<RecordLoopTimeline> loops = new List<RecordLoopTimeline>(4);
 
