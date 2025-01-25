@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class MagicDrumManager : MonoBehaviour
 {
-
+    public GameObject hittableObjectParticlePrefab;
 
 
     // Start is called before the first frame update
@@ -27,6 +27,10 @@ public class MagicDrumManager : MonoBehaviour
             string label = anchor.Label.ToString();
             Debug.Log("Generate audio for label " +  label);
             SoundGenerator.GenerateSound(label, (result)=>anchor.GetComponentInChildren<Collider>().gameObject.AddComponent<SoundCollider>().Setup(label, result));
+
+            GameObject HOP = Instantiate(hittableObjectParticlePrefab);
+            HOP.transform.position = anchor.GetComponentInChildren<MeshFilter>().gameObject.transform.position;
+            anchor.GetComponentInChildren<MeshRenderer>().enabled = false;
         }
     }
 
