@@ -97,7 +97,8 @@ public class SoundCollider : MonoBehaviour
             {
                 collider = this,
                 velocity = jv.velocity.magnitude,
-                tag = collision.collider.tag
+                tag = collision.collider.tag,
+                position = collision.GetContact(0).point
             };
 
             OnCollision?.Invoke(e);
@@ -113,4 +114,5 @@ public class SoundCollisionEvent
     public SoundCollider collider;
     public float velocity;
     public string tag;
+    public Vector3 position;
 }
