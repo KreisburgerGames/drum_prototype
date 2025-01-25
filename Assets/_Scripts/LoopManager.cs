@@ -1,3 +1,4 @@
+using Oculus.Interaction;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,9 +9,10 @@ using UnityEngine.LowLevel;
 public class LoopManager : MonoBehaviour
 {
 
+
     bool _isRecording;
 
-    List<RecordLoopTimeline> loops;
+    List<RecordLoopTimeline> loops = new List<RecordLoopTimeline>();
 
     RecordLoopTimeline activeLoop;
 
@@ -42,6 +44,8 @@ public class LoopManager : MonoBehaviour
     {
         if (_isRecording == false)
             return;
+
+        activeLoop.Add(collision);
     }
 
     // Update is called once per frame
@@ -81,6 +85,16 @@ public class RecordLoopTimeline
     public void Stop()
     {
         isPlaying = false;
+    }
+
+    public void Add(SoundCollisionEvent collision)
+    {
+        RecordHistoryEvent record = new RecordHistoryEvent()
+        {
+            absoluteTime = DateTime.Now,
+            collision = collision,
+        };
+        timeline.Add(record);
     }
     
     public float GetRelativeTime(RecordHistoryEvent record)
