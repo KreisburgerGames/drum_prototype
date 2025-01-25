@@ -6,6 +6,10 @@ using UnityEngine;
 public class SoundCollider : MonoBehaviour
 {
 
+    public static Action<SoundCollisionEvent> OnSoundCollisionEvent;
+
+    public Action<SoundCollisionEvent> OnCollision;
+
     public AudioClip clip;
 
     public string title;
@@ -89,7 +93,24 @@ public class SoundCollider : MonoBehaviour
 
             SoundEffectManager.Play(clip, collision.collider.tag, jv.velocity.magnitude);
 
+            SoundCollisionEvent e = new SoundCollisionEvent()
+            {
+                collider = this,
+                velocity = jv.velocity.magnitude,
+                tag = collision.collider.tag
+            };
+
+            OnCollision?.Invoke(e);
+            OnSoundCollisionEvent?.Invoke(e);
+
             Debug.Log("Play clip for item " + name);
         }
     }
+}
+
+public class SoundCollisionEvent
+{
+    public SoundCollider collider;
+    public float velocity;
+    public string tag;
 }
