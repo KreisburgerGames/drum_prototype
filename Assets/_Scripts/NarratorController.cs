@@ -93,7 +93,7 @@ public class NarratorSetDanceAction : INarratorAction
 [System.Serializable]
 public class NarratorWaitForRecordAction : INarratorAction
 {
-
+    [SerializeReference, SubclassSelector]
     public INarratorAction idleAction;
     public float idleTime;
 
@@ -122,6 +122,7 @@ public class NarratorWaitForRecordAction : INarratorAction
 public class NarratorWaitForCollisionAction : INarratorAction
 {
 
+    [SerializeReference, SubclassSelector]
     public INarratorAction idleAction;
     public float idleTime;
 
