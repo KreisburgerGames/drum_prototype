@@ -107,7 +107,7 @@ public class NarratorWaitForRecordAction : INarratorAction
         float time = 0;
         while (LoopManager._isRecording != assertIsRecording)
         {
-            if(time > idleTime)
+            if(time > idleTime && idleAction != null)
             {
                 yield return idleAction.DoAction(controller);
                 time = 0;
@@ -136,7 +136,7 @@ public class NarratorWaitForCollisionAction : INarratorAction
         float time = 0;
         while (hasCollided == false)
         {
-            if (time > idleTime)
+            if (time > idleTime && idleAction != null)
             {
                 yield return idleAction.DoAction(controller);
                 time = 0;

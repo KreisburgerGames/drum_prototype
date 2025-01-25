@@ -13,6 +13,8 @@ public class LoopManager : MonoBehaviour
 
     public static bool _isRecording;
 
+    float recordElapsedTime = 0;
+
     List<RecordLoopTimeline> loops = new List<RecordLoopTimeline>(4);
 
     RecordLoopTimeline activeLoop;
@@ -43,6 +45,7 @@ public class LoopManager : MonoBehaviour
 
         _isRecording = true;
         activeLoop = new RecordLoopTimeline();
+        recordElapsedTime = 0;
         OnStartRecording?.Invoke(index);
         Debug.Log("Start recordng");
     }
@@ -59,9 +62,10 @@ public class LoopManager : MonoBehaviour
     {
         _isRecording = false;
 
+        activeLoop.duration = recordElapsedTime;
         loops[index] = activeLoop;
         OnStopRecording?.Invoke(index);
-        Debug.Log("Stop recording");
+        Debug.Log("Stop recording with duration " + recordElapsedTime);
     }
 
     //public void ToggleRecording()
@@ -108,8 +112,8 @@ public class LoopManager : MonoBehaviour
         if (_isRecording == false)
             return;
 
-        activeLoop.Add(collision);
-        Debug.Log("Record collision event " + collision.collider.name);
+        activeLoop.Add(collision, recordElapsedTime);
+        Debug.Log("Record collision event " + collision.collider.name + " at time " + recordElapsedTime);
     }
 
     // Update is called once per frame
@@ -123,6 +127,9 @@ public class LoopManager : MonoBehaviour
                 loop.PlayLoop(Time.deltaTime);
             }
         }
+
+        if(_isRecording)
+            recordElapsedTime += Time.deltaTime;
     }
 }
 
@@ -134,7 +141,7 @@ public class RecordLoopTimeline
 
     public float playbackTime;
 
-    public float duration => (float)(timeline.Last().absoluteTime - timeline.First().absoluteTime).TotalMilliseconds / 1000f;
+    public float duration;// => (float)(timeline.Last().absoluteTime - timeline.First().absoluteTime).TotalSeconds;
 
     public RecordLoopTimeline()
     {
@@ -152,23 +159,25 @@ public class RecordLoopTimeline
     public void Stop()
     {
         isPlaying = false;
-        Debug.Log("Stop playing loop");
+        //duration = elapsedTime;
+        Debug.Log("Stop playing loop with duration " + duration);
     }
 
-    public void Add(SoundCollisionEvent collision)
+    public void Add(SoundCollisionEvent collision, float elapsedTime)
     {
         RecordHistoryEvent record = new RecordHistoryEvent()
         {
-            absoluteTime = DateTime.Now,
+            //absoluteTime = DateTime.Now,
+            elapsedTime = elapsedTime,
             collision = collision,
         };
         timeline.Add(record);
     }
     
-    public float GetRelativeTime(RecordHistoryEvent record)
-    {
-        return record.GetRelativeTime(startTime);
-    }
+    //public float GetRelativeTime(RecordHistoryEvent record)
+    //{
+    //    return record.GetRelativeTime(startTime);
+    //}
 
     public void PlayLoop(float deltaTime)
     {
@@ -179,7 +188,7 @@ public class RecordLoopTimeline
 
         foreach(var record in timeline)
         {
-            if(record.hasPlayed == false && playbackTime > GetRelativeTime(record))
+            if(record.hasPlayed == false && playbackTime > record.elapsedTime/*GetRelativeTime(record)*/)
             {
                 record.PlayRecord();
             }
@@ -206,19 +215,20 @@ public class RecordLoopTimeline
 
 public class RecordHistoryEvent
 {
-    public DateTime absoluteTime;
+    //public DateTime absoluteTime;
     public SoundCollisionEvent collision;
     public bool hasPlayed;
+    public float elapsedTime;
 
-    public float GetRelativeTime(DateTime startTime)
-    {
-        return (float)(absoluteTime - startTime).TotalMilliseconds / 1000f;
-    }
+    //public float GetRelativeTime(DateTime startTime)
+    //{
+    //    return (float)(absoluteTime - startTime).TotalMilliseconds / 1000f;
+    //}
 
     public void PlayRecord()
     {
         hasPlayed = true;
         SoundEffectManager.Play(collision.collider.clip, collision.tag, collision.velocity, collision.position);
-        Debug.Log("Play record " + collision.collider.name);
+        Debug.Log("Play record " + collision.collider.name + " at time " + elapsedTime);
     }
 }
