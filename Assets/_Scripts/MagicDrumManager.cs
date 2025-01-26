@@ -37,23 +37,26 @@ public class MagicDrumManager : MonoBehaviour
 
             Collider collider = anchor.GetComponentInChildren<Collider>();
 
-            if(collider == null)
+            if (collider == null)
                 continue;
 
             string label = anchor.Label.ToString();
-            Debug.Log("Generate audio for label " +  label);
-            SoundGenerator.GenerateSound(label, (result)=>collider.gameObject.AddComponent<SoundCollider>().Setup(label, result));
+            Debug.Log("Generate audio for label " + label);
+            SoundGenerator.GenerateSound(label, (result) =>
+            {
+                collider.gameObject.AddComponent<SoundCollider>().Setup(label, result);
 
-            GameObject HOP = Instantiate(hittableObjectParticlePrefab);
-            HOP.transform.position = anchor.GetComponentInChildren<MeshFilter>().gameObject.transform.position;
-            HOP.transform.SetParent(anchor.gameObject.GetComponentInChildren<MeshFilter>().gameObject.transform);
-            anchor.GetComponentInChildren<MeshRenderer>().enabled = false;
-            ParticleSystem ps = HOP.GetComponent<ParticleSystem>();
-            var shape = ps.shape;
-            shape.shapeType = ParticleSystemShapeType.Mesh;
-            shape.mesh = anchor.GetComponentInChildren<MeshFilter>().mesh;
-            HOP.GetComponentInParent<SoundCollider>().particleSystem = ps;
-            HOP.SetActive(false);
+                GameObject HOP = Instantiate(hittableObjectParticlePrefab);
+                HOP.transform.position = anchor.GetComponentInChildren<MeshFilter>().gameObject.transform.position;
+                HOP.transform.SetParent(anchor.gameObject.GetComponentInChildren<MeshFilter>().gameObject.transform);
+                anchor.GetComponentInChildren<MeshRenderer>().enabled = false;
+                ParticleSystem ps = HOP.GetComponent<ParticleSystem>();
+                var shape = ps.shape;
+                shape.shapeType = ParticleSystemShapeType.Mesh;
+                shape.mesh = anchor.GetComponentInChildren<MeshFilter>().mesh;
+                HOP.GetComponentInParent<SoundCollider>().particleSystem = ps;
+                HOP.SetActive(false);
+            });
         }
 
         OnRoomSetupComplete?.Invoke();

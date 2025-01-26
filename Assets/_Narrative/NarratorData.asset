@@ -19,7 +19,7 @@ MonoBehaviour:
   - rid: 4483779321251495936
   - rid: 6135686683664842776
   - rid: 6135686683664842777
-  - rid: 6135686683664842777
+  - rid: 6135686683664842801
   - rid: 6135686683664842778
   - rid: 6135686683664842779
   - rid: 6135686683664842781
@@ -199,3 +199,8 @@ MonoBehaviour:
       type: {class: NarratorSetDanceAction, ns: , asm: Assembly-CSharp}
       data:
         isDancing: 1
+    - rid: 6135686683664842801
+      type: {class: NarratorSpeakAction, ns: , asm: Assembly-CSharp}
+      data:
+        subtitle: Every corner of your space holds its own melody.
+        voiceover: {fileID: 8300000, guid: a1ee5578617c26949977ce44fa66fb6c, type: 3}
