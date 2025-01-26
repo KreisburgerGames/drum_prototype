@@ -120,9 +120,9 @@ public class SoundCollider : MonoBehaviour
             //        return;
             //}
 
-            float velocity = jv.velocity.magnitude;
+            float handVelocity = jv.velocity.magnitude;
 
-            if (velocity < 0.1f)
+            if (handVelocity < 0.1f)
                 return;
 
             //(clip, collision.collider.tag, velocity, collision.GetContact(0).point);
@@ -130,10 +130,12 @@ public class SoundCollider : MonoBehaviour
             SoundCollisionEvent e = new SoundCollisionEvent()
             {
                 collider = this,
-                velocity = velocity,
+                velocity = handVelocity,
                 tag = collision.collider.tag,
                 position = collision.GetContact(0).point
             };
+
+            print(e.tag);
 
             SoundEffectManager.Play(e);
 

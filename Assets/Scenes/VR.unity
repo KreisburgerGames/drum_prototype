@@ -385,6 +385,7 @@ GameObject:
   - component: {fileID: 32361727}
   - component: {fileID: 32361730}
   - component: {fileID: 32361731}
+  - component: {fileID: 32361732}
   m_Layer: 0
   m_Name: RightPalmCollider
   m_TagString: Palm
@@ -448,7 +449,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0cee96bcc3fb3c445b55cacd8aa34d8a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -501,6 +502,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6fd6933107ab9c41be6f4cc4e66fd00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &32361732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 32361725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5849014ecae57a41b4ec3c7969b498f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &32584054
@@ -2901,6 +2914,7 @@ GameObject:
   - component: {fileID: 192793745}
   - component: {fileID: 192793748}
   - component: {fileID: 192793749}
+  - component: {fileID: 192793750}
   m_Layer: 0
   m_Name: LeftMiddle
   m_TagString: Fingertip
@@ -2964,7 +2978,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0cee96bcc3fb3c445b55cacd8aa34d8a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3017,6 +3031,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6fd6933107ab9c41be6f4cc4e66fd00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &192793750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192793743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5849014ecae57a41b4ec3c7969b498f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &201225616
@@ -3414,6 +3440,7 @@ GameObject:
   - component: {fileID: 236853589}
   - component: {fileID: 236853592}
   - component: {fileID: 236853593}
+  - component: {fileID: 236853594}
   m_Layer: 0
   m_Name: RightMiddleKnuckle
   m_TagString: Knuckle
@@ -3477,7 +3504,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0cee96bcc3fb3c445b55cacd8aa34d8a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3530,6 +3557,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6fd6933107ab9c41be6f4cc4e66fd00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &236853594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236853587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5849014ecae57a41b4ec3c7969b498f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &238577279
@@ -5619,6 +5658,7 @@ GameObject:
   - component: {fileID: 393024911}
   - component: {fileID: 393024914}
   - component: {fileID: 393024915}
+  - component: {fileID: 393024916}
   m_Layer: 0
   m_Name: RightIndex
   m_TagString: Fingertip
@@ -5682,7 +5722,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0cee96bcc3fb3c445b55cacd8aa34d8a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5735,6 +5775,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6fd6933107ab9c41be6f4cc4e66fd00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &393024916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393024909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5849014ecae57a41b4ec3c7969b498f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &393228228
@@ -6040,6 +6092,7 @@ GameObject:
   - component: {fileID: 420581722}
   - component: {fileID: 420581725}
   - component: {fileID: 420581726}
+  - component: {fileID: 420581727}
   m_Layer: 0
   m_Name: LeftMiddleKnuckle
   m_TagString: Knuckle
@@ -6103,7 +6156,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0cee96bcc3fb3c445b55cacd8aa34d8a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6156,6 +6209,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6fd6933107ab9c41be6f4cc4e66fd00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &420581727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 420581720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5849014ecae57a41b4ec3c7969b498f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &422708332
@@ -7319,6 +7384,7 @@ GameObject:
   - component: {fileID: 481661440}
   - component: {fileID: 481661443}
   - component: {fileID: 481661444}
+  - component: {fileID: 481661445}
   m_Layer: 0
   m_Name: LeftIndex
   m_TagString: Fingertip
@@ -7382,7 +7448,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0cee96bcc3fb3c445b55cacd8aa34d8a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7435,6 +7501,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6fd6933107ab9c41be6f4cc4e66fd00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &481661445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481661438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5849014ecae57a41b4ec3c7969b498f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &484392335
@@ -9013,6 +9091,7 @@ GameObject:
   - component: {fileID: 641492993}
   - component: {fileID: 641492996}
   - component: {fileID: 641492997}
+  - component: {fileID: 641492998}
   m_Layer: 0
   m_Name: RightRing
   m_TagString: Fingertip
@@ -9076,7 +9155,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0cee96bcc3fb3c445b55cacd8aa34d8a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9129,6 +9208,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6fd6933107ab9c41be6f4cc4e66fd00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &641492998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641492991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5849014ecae57a41b4ec3c7969b498f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &641937765
@@ -9477,6 +9568,7 @@ GameObject:
   - component: {fileID: 672498196}
   - component: {fileID: 672498199}
   - component: {fileID: 672498200}
+  - component: {fileID: 672498201}
   m_Layer: 0
   m_Name: LeftThumb
   m_TagString: Fingertip
@@ -9540,7 +9632,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0cee96bcc3fb3c445b55cacd8aa34d8a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9593,6 +9685,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6fd6933107ab9c41be6f4cc4e66fd00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &672498201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672498194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5849014ecae57a41b4ec3c7969b498f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &673524188
@@ -10331,6 +10435,53 @@ Transform:
   - {fileID: 737202022}
   m_Father: {fileID: 1062455877}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &697160871
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 697160873}
+  - component: {fileID: 697160872}
+  m_Layer: 0
+  m_Name: RainbowManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &697160872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697160871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad25c752a2fe455489bbee20b5c1187b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.25
+  currentColor: {r: 1, g: 0, b: 0, a: 0}
+  alpha: 0.5
+--- !u!4 &697160873
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697160871}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &701770129
 GameObject:
   m_ObjectHideFlags: 0
@@ -10625,6 +10776,7 @@ GameObject:
   - component: {fileID: 722795115}
   - component: {fileID: 722795118}
   - component: {fileID: 722795119}
+  - component: {fileID: 722795120}
   m_Layer: 0
   m_Name: LeftLittle
   m_TagString: Fingertip
@@ -10688,7 +10840,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0cee96bcc3fb3c445b55cacd8aa34d8a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10741,6 +10893,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6fd6933107ab9c41be6f4cc4e66fd00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &722795120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722795113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5849014ecae57a41b4ec3c7969b498f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &723404074
@@ -13347,6 +13511,7 @@ GameObject:
   - component: {fileID: 915238413}
   - component: {fileID: 915238416}
   - component: {fileID: 915238417}
+  - component: {fileID: 915238418}
   m_Layer: 0
   m_Name: RightLittle
   m_TagString: Fingertip
@@ -13410,7 +13575,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0cee96bcc3fb3c445b55cacd8aa34d8a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13463,6 +13628,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6fd6933107ab9c41be6f4cc4e66fd00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &915238418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915238411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5849014ecae57a41b4ec3c7969b498f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &917537885
@@ -14911,6 +15088,7 @@ GameObject:
   - component: {fileID: 1010294646}
   - component: {fileID: 1010294649}
   - component: {fileID: 1010294650}
+  - component: {fileID: 1010294651}
   m_Layer: 0
   m_Name: LeftRing
   m_TagString: Fingertip
@@ -14974,7 +15152,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0cee96bcc3fb3c445b55cacd8aa34d8a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15027,6 +15205,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6fd6933107ab9c41be6f4cc4e66fd00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1010294651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010294644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5849014ecae57a41b4ec3c7969b498f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1013423893
@@ -16063,6 +16253,7 @@ GameObject:
   - component: {fileID: 1112021269}
   - component: {fileID: 1112021272}
   - component: {fileID: 1112021273}
+  - component: {fileID: 1112021274}
   m_Layer: 0
   m_Name: RightMiddle
   m_TagString: Fingertip
@@ -16126,7 +16317,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0cee96bcc3fb3c445b55cacd8aa34d8a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -16179,6 +16370,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6fd6933107ab9c41be6f4cc4e66fd00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1112021274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112021267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5849014ecae57a41b4ec3c7969b498f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1113636537
@@ -19156,6 +19359,7 @@ GameObject:
   - component: {fileID: 1283593109}
   - component: {fileID: 1283593112}
   - component: {fileID: 1283593113}
+  - component: {fileID: 1283593114}
   m_Layer: 0
   m_Name: LeftLittleKnuckle
   m_TagString: Knuckle
@@ -19219,7 +19423,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0cee96bcc3fb3c445b55cacd8aa34d8a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19272,6 +19476,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6fd6933107ab9c41be6f4cc4e66fd00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1283593114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283593107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5849014ecae57a41b4ec3c7969b498f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1284136621
@@ -20253,6 +20469,7 @@ GameObject:
   - component: {fileID: 1388627002}
   - component: {fileID: 1388627005}
   - component: {fileID: 1388627006}
+  - component: {fileID: 1388627007}
   m_Layer: 0
   m_Name: RightThumb
   m_TagString: Fingertip
@@ -20316,7 +20533,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0cee96bcc3fb3c445b55cacd8aa34d8a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20369,6 +20586,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6fd6933107ab9c41be6f4cc4e66fd00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1388627007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388627000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5849014ecae57a41b4ec3c7969b498f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1395604347
@@ -20696,6 +20925,7 @@ GameObject:
   - component: {fileID: 1420651239}
   - component: {fileID: 1420651242}
   - component: {fileID: 1420651243}
+  - component: {fileID: 1420651244}
   m_Layer: 0
   m_Name: RightIndexKnuckle
   m_TagString: Knuckle
@@ -20759,7 +20989,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0cee96bcc3fb3c445b55cacd8aa34d8a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20812,6 +21042,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6fd6933107ab9c41be6f4cc4e66fd00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1420651244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420651237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5849014ecae57a41b4ec3c7969b498f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1422050355
@@ -21620,6 +21862,7 @@ GameObject:
   - component: {fileID: 1452900075}
   - component: {fileID: 1452900078}
   - component: {fileID: 1452900079}
+  - component: {fileID: 1452900080}
   m_Layer: 0
   m_Name: LeftPalmCollider
   m_TagString: Palm
@@ -21683,7 +21926,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0cee96bcc3fb3c445b55cacd8aa34d8a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -21736,6 +21979,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6fd6933107ab9c41be6f4cc4e66fd00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1452900080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452900073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5849014ecae57a41b4ec3c7969b498f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1454091626
@@ -22523,6 +22778,7 @@ GameObject:
   - component: {fileID: 1493499353}
   - component: {fileID: 1493499356}
   - component: {fileID: 1493499357}
+  - component: {fileID: 1493499358}
   m_Layer: 0
   m_Name: LeftRingKnuckle
   m_TagString: Knuckle
@@ -22586,7 +22842,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0cee96bcc3fb3c445b55cacd8aa34d8a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -22639,6 +22895,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6fd6933107ab9c41be6f4cc4e66fd00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1493499358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493499351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5849014ecae57a41b4ec3c7969b498f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1494787453
@@ -24489,6 +24757,7 @@ GameObject:
   - component: {fileID: 1646833409}
   - component: {fileID: 1646833412}
   - component: {fileID: 1646833413}
+  - component: {fileID: 1646833414}
   m_Layer: 0
   m_Name: RightRingKnuckle
   m_TagString: Knuckle
@@ -24552,7 +24821,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0cee96bcc3fb3c445b55cacd8aa34d8a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24605,6 +24874,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6fd6933107ab9c41be6f4cc4e66fd00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1646833414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1646833407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5849014ecae57a41b4ec3c7969b498f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1647648657
@@ -25815,6 +26096,7 @@ GameObject:
   - component: {fileID: 1716309281}
   - component: {fileID: 1716309284}
   - component: {fileID: 1716309285}
+  - component: {fileID: 1716309286}
   m_Layer: 0
   m_Name: RightLittleKnuckle
   m_TagString: Knuckle
@@ -25878,7 +26160,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0cee96bcc3fb3c445b55cacd8aa34d8a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -25931,6 +26213,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6fd6933107ab9c41be6f4cc4e66fd00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1716309286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716309279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5849014ecae57a41b4ec3c7969b498f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1716825310
@@ -30706,6 +31000,7 @@ GameObject:
   - component: {fileID: 2015184661}
   - component: {fileID: 2015184664}
   - component: {fileID: 2015184665}
+  - component: {fileID: 2015184666}
   m_Layer: 0
   m_Name: LeftIndexKnuckle
   m_TagString: Knuckle
@@ -30769,7 +31064,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0cee96bcc3fb3c445b55cacd8aa34d8a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30822,6 +31117,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6fd6933107ab9c41be6f4cc4e66fd00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2015184666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015184659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5849014ecae57a41b4ec3c7969b498f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2018905166
@@ -32147,6 +32454,7 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 697160873}
   - {fileID: 838208336}
   - {fileID: 705507995}
   - {fileID: 2141462024}
