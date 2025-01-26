@@ -11,18 +11,25 @@ public class MagicDrumManager : MonoBehaviour
 
     public static Action OnRoomSetupComplete;
 
+    public static string Genre;
 
     // Start is called before the first frame update
     void Start()
     {
+        Genre = null;
         StartCoroutine(SetupMagicDrumScene());
     }
 
-
+    public void SetGenre(string genre)
+    {
+        Genre = genre;
+    }
 
     IEnumerator SetupMagicDrumScene()
     {
         yield return new WaitUntil(() => MRUK.Instance.IsInitialized);
+
+        yield return new WaitUntil(() => Genre != null);
 
         MRUKAnchor[] anchors = FindObjectsOfType<MRUKAnchor>();
         foreach (MRUKAnchor anchor in anchors)

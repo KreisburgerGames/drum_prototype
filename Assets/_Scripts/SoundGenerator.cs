@@ -52,7 +52,7 @@ public class SoundGenerator : MonoBehaviour
 
     public static void GenerateSound(string text, Action<AudioClip> onResult)
     {
-        string prompt = "One hit on a drum that sounds like a " + text;
+        string prompt = "One hit on a drum that sounds like a " + text + " in the music genre " + MagicDrumManager.Genre;
         if (instance.useDebug && Application.isEditor)
         {
             onResult?.Invoke(instance.testClip);
