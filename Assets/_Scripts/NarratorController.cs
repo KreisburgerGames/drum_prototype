@@ -63,6 +63,17 @@ public interface INarratorAction
 }
 
 [System.Serializable]
+public class SphereGrow : INarratorAction
+{
+    public static Action startSphere;
+    public IEnumerator DoAction(NarratorController controller)
+    {
+        startSphere?.Invoke();
+        yield return null;
+    }
+}
+
+[System.Serializable]
 public class NarratorSpeakAction : INarratorAction
 {
     [TextArea]

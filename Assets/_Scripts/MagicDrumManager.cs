@@ -52,6 +52,8 @@ public class MagicDrumManager : MonoBehaviour
             var shape = ps.shape;
             shape.shapeType = ParticleSystemShapeType.Mesh;
             shape.mesh = anchor.GetComponentInChildren<MeshFilter>().mesh;
+            HOP.GetComponentInParent<SoundCollider>().particleSystem = ps;
+            HOP.SetActive(false);
         }
 
         OnRoomSetupComplete?.Invoke();

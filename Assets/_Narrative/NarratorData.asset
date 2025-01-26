@@ -18,6 +18,7 @@ MonoBehaviour:
   - rid: 6135686683664842774
   - rid: 6135686683664842775
   - rid: 6135686683664842773
+  - rid: 4483779321251495936
   - rid: 6135686683664842776
   - rid: 6135686683664842777
   - rid: 6135686683664842778
@@ -47,6 +48,9 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
+    - rid: 4483779321251495936
+      type: {class: SphereGrow, ns: , asm: Assembly-CSharp}
+      data: 
     - rid: 6135686683664842771
       type: {class: NarratorSpeakAction, ns: , asm: Assembly-CSharp}
       data:

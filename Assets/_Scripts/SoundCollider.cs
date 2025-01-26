@@ -19,6 +19,11 @@ public class SoundCollider : MonoBehaviour
     private int sampleLength;
 
     Rigidbody rb;
+
+    public bool canPlay = false;
+
+    public ParticleSystem particleSystem;
+    private bool activated = false;
     //AudioSource audio;
 
     // Start is called before the first frame update
@@ -37,6 +42,18 @@ public class SoundCollider : MonoBehaviour
         this.title = title;
 
         //audio.clip = 
+    }
+
+    void Update()
+    {
+        if(!activated)
+        {
+            if(particleSystem != null && canPlay)
+            {
+                particleSystem.gameObject.SetActive(true);
+                activated = true;
+            }
+        }
     }
 
     public AudioClip TrimSilenceFromClip(AudioClip originalClip)
@@ -86,6 +103,7 @@ public class SoundCollider : MonoBehaviour
         //    return;
 
         //audio.PlayOneShot(audio.clip, 1f);
+        if(!canPlay) return;
 
         if (collision.collider.TryGetComponent(out JointVelocity jv)) {
 
@@ -131,6 +149,7 @@ public class SoundCollider : MonoBehaviour
         }
     }
 }
+
 
 public class SoundCollisionEvent
 {
