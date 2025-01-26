@@ -71,7 +71,7 @@ public class SoundEffectManager : MonoBehaviour
         source.transform.position = sound.position;
 
         source.clip = sound.collider.clip;
-        switch (tag)
+        switch (sound.tag)
         {
             case "Palm":
                 source.pitch = 0.5f;
