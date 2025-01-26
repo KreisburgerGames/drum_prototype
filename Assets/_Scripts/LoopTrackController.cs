@@ -10,7 +10,7 @@ public class LoopTrackController : MonoBehaviour
 
     public PokeInteractable recordButton, playButton;
 
-    public GameObject stopRecordIcon;
+    public GameObject stopRecordIcon, countdownIcon;
 
     public int index;
 
@@ -21,6 +21,7 @@ public class LoopTrackController : MonoBehaviour
         LoopManager.OnStopPlayback += OnStopPlayback;
         LoopManager.OnStartRecording += OnStartRecording;
         LoopManager.OnStopRecording += OnStopRecording;
+        LoopManager.CountdownStart += OnCountdownStart;
 
         Setup();
     }
@@ -31,12 +32,28 @@ public class LoopTrackController : MonoBehaviour
         LoopManager.OnStopPlayback -= OnStopPlayback;
         LoopManager.OnStartRecording -= OnStartRecording;
         LoopManager.OnStopRecording -= OnStopRecording;
+        LoopManager.CountdownStart -= OnCountdownStart;
     }
 
     void Setup()
     {
         playButton.gameObject.SetActive(false);
         stopRecordIcon.gameObject.SetActive(false);
+    }
+
+    private void OnCountdownStart(int obj)
+    {
+        if(obj == index)
+        {
+            //recordButton.GetComponentInChildren<TMP_Text>().text = "[]";
+            countdownIcon.SetActive(true);
+            playButton.gameObject.SetActive(false);
+        }
+        else
+        {
+            countdownIcon.SetActive(false);
+            recordButton.gameObject.SetActive(false);
+        }
     }
 
     private void OnStartPlayback(int obj)
@@ -58,6 +75,7 @@ public class LoopTrackController : MonoBehaviour
         if(obj == index)
         {
             //recordButton.GetComponentInChildren<TMP_Text>().text = "[]";
+            countdownIcon.SetActive(false);
             stopRecordIcon.SetActive(true);
             playButton.gameObject.SetActive(false);
         }

@@ -9,7 +9,7 @@ using UnityEngine.LowLevel;
 public class LoopManager : MonoBehaviour
 {
 
-    public static Action<int> OnStartRecording, OnStopRecording, OnStartPlayback, OnStopPlayback;
+    public static Action<int> OnStartRecording, OnStopRecording, OnStartPlayback, OnStopPlayback, CountdownStart;
 
     public static bool _isRecording;
 
@@ -18,6 +18,13 @@ public class LoopManager : MonoBehaviour
     List<RecordLoopTimeline> loops = new List<RecordLoopTimeline>(4);
 
     RecordLoopTimeline activeLoop;
+
+    private AudioSource audioSource;
+    public float countdownbpm = 100f;
+    private float countdownSpb;
+    public float firstBeatPitch = 1f;
+    public float subBeatPitch = 0.75f;
+    private bool isCounting = false;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +35,8 @@ public class LoopManager : MonoBehaviour
         {
             loops.Add(null);
         }
+        audioSource = GetComponent<AudioSource>();
+        countdownSpb = 60f / countdownbpm;
     }
 
     private void OnDestroy()
@@ -88,7 +97,9 @@ public class LoopManager : MonoBehaviour
         }
         else
         {
-            StartRecording(index);
+            if(isCounting) return;
+            isCounting = true;
+            StartCoroutine(Countdown(index));
         }
     }
 
@@ -105,6 +116,22 @@ public class LoopManager : MonoBehaviour
             timeline.Play();
             OnStartPlayback?.Invoke(index);
         }
+    }
+
+    IEnumerator Countdown(int index)
+    {
+        CountdownStart?.Invoke(index);
+        audioSource.pitch = firstBeatPitch;
+        audioSource.Play();
+        yield return new WaitForSeconds(countdownSpb);
+        audioSource.pitch = subBeatPitch;
+        audioSource.Play();
+        yield return new WaitForSeconds(countdownSpb);
+        audioSource.Play();
+        yield return new WaitForSeconds(countdownSpb);
+        audioSource.Play();
+        isCounting = false;
+        StartRecording(index);
     }
 
     private void OnSoundCollision(SoundCollisionEvent collision)
