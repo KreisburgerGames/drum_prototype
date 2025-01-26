@@ -38,12 +38,12 @@ public class SoundGenerator : MonoBehaviour
         StartCoroutine(GenerateSoundByte(testDescription, (result)=>testClip = result));
     }
 
-    [ContextMenu("Play")]
-    public void Play()
-    {
-        //AudioSource.PlayClipAtPoint(testClip, Vector3.zero);
-        SoundEffectManager.Play(testClip, tag, velocity, Vector3.zero);
-    }
+    //[ContextMenu("Play")]
+    //public void Play()
+    //{
+    //    //AudioSource.PlayClipAtPoint(testClip, Vector3.zero);
+    //    SoundEffectManager.Play(testClip, tag, velocity, Vector3.zero);
+    //}
 
     public void TestAudioClip(AudioClip audioClip)
     {

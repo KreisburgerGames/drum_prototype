@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,8 @@ public class SoundEffectManager : MonoBehaviour
 {
 
     static SoundEffectManager instance;
+
+    public static Action<SoundCollisionEvent> OnAudioEvent;
 
     [SerializeField]
     AudioSource prefab;
@@ -45,17 +48,17 @@ public class SoundEffectManager : MonoBehaviour
         }
     }
 
-    public static void Play(AudioClip clip, string tag, float velocity, Vector3 positon)
+    public static void Play(SoundCollisionEvent sound)//(AudioClip clip, string tag, float velocity, Vector3 positon)
     {
-        instance.PlayClip(clip, tag, velocity, positon);
+        instance.PlayClip(sound);//(clip, tag, velocity, positon);
     }
 
-    public void PlayClip(AudioClip clip, string tag, float velocity, Vector3 position)
+    public void PlayClip(SoundCollisionEvent sound)//(AudioClip clip, string tag, float velocity, Vector3 position)
     {
-        StartCoroutine(HandleAudioSource(clip, tag, velocity, position));
+        StartCoroutine(HandleAudioSource(sound));//(clip, tag, velocity, position));
     }
 
-    IEnumerator HandleAudioSource(AudioClip clip, string tag, float velocity, Vector3 position)
+    IEnumerator HandleAudioSource(SoundCollisionEvent sound)//(AudioClip clip, string tag, float velocity, Vector3 position)
     {
         if (inactiveSource.Count == 0)
         {
@@ -65,9 +68,9 @@ public class SoundEffectManager : MonoBehaviour
 
         AudioSource source = inactiveSource[0];
 
-        source.transform.position = position;
+        source.transform.position = sound.position;
 
-        source.clip = clip;
+        source.clip = sound.collider.clip;
         switch (tag)
         {
             case "Palm":
@@ -80,9 +83,9 @@ public class SoundEffectManager : MonoBehaviour
                 source.pitch = 1.5f;
                 break;
         }
-        source.volume = velocity / maxVelocity;
+        source.volume = sound.velocity / maxVelocity;
 
-        Debug.Log($"Play clip at pitch {source.pitch} from {tag} tag and volume {source.volume} from {velocity} velocity");
+        Debug.Log($"Play clip at pitch {source.pitch} from {tag} tag and volume {source.volume} from {sound.velocity} velocity");
 
         inactiveSource.Remove(source);
         activeSource.Add(source);
@@ -90,6 +93,8 @@ public class SoundEffectManager : MonoBehaviour
         source.gameObject.SetActive(true);
 
         source.Play();
+
+        OnAudioEvent?.Invoke(sound);//(clip, tag, velocity, position);
 
         yield return new WaitWhile(() => source.isPlaying);
 

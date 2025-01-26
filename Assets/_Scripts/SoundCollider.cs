@@ -105,16 +105,17 @@ public class SoundCollider : MonoBehaviour
             if (velocity < 0.1f)
                 return;
 
-            SoundEffectManager.Play(clip, collision.collider.tag, velocity, collision.GetContact(0).point);
+            //(clip, collision.collider.tag, velocity, collision.GetContact(0).point);
 
             SoundCollisionEvent e = new SoundCollisionEvent()
             {
                 collider = this,
                 velocity = velocity,
                 tag = collision.collider.tag,
-                position = collision.GetContact(0).point,
-                obj = gameObject
+                position = collision.GetContact(0).point
             };
+
+            SoundEffectManager.Play(e);
 
             OnCollision?.Invoke(e);
             OnSoundCollisionEvent?.Invoke(e);
@@ -135,5 +136,4 @@ public class SoundCollisionEvent
     public float velocity;
     public string tag;
     public Vector3 position;
-    public GameObject obj;
 }

@@ -228,7 +228,7 @@ public class RecordHistoryEvent
     public void PlayRecord()
     {
         hasPlayed = true;
-        SoundEffectManager.Play(collision.collider.clip, collision.tag, collision.velocity, collision.position);
+        SoundEffectManager.Play(collision);//(collision.collider.clip, collision.tag, collision.velocity, collision.position);
         Debug.Log("Play record " + collision.collider.name + " at time " + elapsedTime);
     }
 }

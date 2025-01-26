@@ -12,6 +12,7 @@ public class HitParticleManager : MonoBehaviour
     void Start()
     {
         SoundCollider.OnSoundCollisionEvent += HitParticle;
+        SoundEffectManager.OnAudioEvent += OnAudio;
         for(int i = 0; i < poolSize; i++)
         {
             GameObject hitParticle = Instantiate(hitParticlePrefab, transform);
@@ -20,19 +21,27 @@ public class HitParticleManager : MonoBehaviour
         }
     }
 
+    
+
     void OnDestroy()
     {
         SoundCollider.OnSoundCollisionEvent -= HitParticle;
+        SoundEffectManager.OnAudioEvent -= OnAudio;
     }
 
     private void HitParticle(SoundCollisionEvent soundCollision)
     {
         GameObject hitParticle = hitParticlesPool[currentIndex];
         hitParticle.SetActive(true);
-        RandomizeParticleColor(soundCollision.obj.GetComponentInChildren<ParticleSystem>());
         hitParticle.transform.position = soundCollision.position;
         currentIndex++;
         if(currentIndex > poolSize - 1) currentIndex = 0;
+    }
+
+    private void OnAudio(SoundCollisionEvent @event)
+    {
+        RandomizeParticleColor(@event.collider.GetComponentInChildren<ParticleSystem>());
+
     }
 
     private void RandomizeParticleColor(ParticleSystem particleSystem)
