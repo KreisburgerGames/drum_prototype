@@ -89,6 +89,8 @@ public class SoundCollider : MonoBehaviour
 
         if (collision.collider.TryGetComponent(out JointVelocity jv)) {
 
+            if(!collision.collider.gameObject.GetComponentInParent<OVRHand>().IsTracked) return;
+
             //if(leftTag != null && jv.isRightHand == false)
             //{
             //    if (collision.collider.CompareTag(leftTag) == false)
