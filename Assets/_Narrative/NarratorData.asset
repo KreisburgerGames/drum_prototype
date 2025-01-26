@@ -15,11 +15,10 @@ MonoBehaviour:
   actions:
   - rid: 6135686683664842771
   - rid: 6135686683664842772
-  - rid: 6135686683664842774
-  - rid: 6135686683664842775
   - rid: 6135686683664842773
   - rid: 4483779321251495936
   - rid: 6135686683664842776
+  - rid: 6135686683664842777
   - rid: 6135686683664842777
   - rid: 6135686683664842778
   - rid: 6135686683664842779
@@ -68,17 +67,6 @@ MonoBehaviour:
       data:
         subtitle: Are you ready to discover the sound of your surroundings?
         voiceover: {fileID: 8300000, guid: 0c9740a7b72a5984f8b5961014d56287, type: 3}
-    - rid: 6135686683664842774
-      type: {class: NarratorSpeakAction, ns: , asm: Assembly-CSharp}
-      data:
-        subtitle: 'Before we begin, remember this: a clear space brings clear sounds.'
-        voiceover: {fileID: 8300000, guid: 8ff59731e6db73f468231fbd418a8bc9, type: 3}
-    - rid: 6135686683664842775
-      type: {class: NarratorSpeakAction, ns: , asm: Assembly-CSharp}
-      data:
-        subtitle: Tidy up your surroundings so the musical magic can flow freely
-          and your symphony can truly shine!
-        voiceover: {fileID: 8300000, guid: b3ba4861b9516a241ab609d7ad0418e2, type: 3}
     - rid: 6135686683664842776
       type: {class: NarratorWaitForSecondsAction, ns: , asm: Assembly-CSharp}
       data:
@@ -86,8 +74,9 @@ MonoBehaviour:
     - rid: 6135686683664842777
       type: {class: NarratorSpeakAction, ns: , asm: Assembly-CSharp}
       data:
-        subtitle: Every corner of your space holds its own melody.
-        voiceover: {fileID: 8300000, guid: a1ee5578617c26949977ce44fa66fb6c, type: 3}
+        subtitle: "I\u2019ve flipped your space into a music playground\u2014everyday
+          objects are ready to vibe with your energy."
+        voiceover: {fileID: 8300000, guid: 61fbd49a0369b1148855eece3ee67e20, type: 3}
     - rid: 6135686683664842778
       type: {class: NarratorSpeakAction, ns: , asm: Assembly-CSharp}
       data:

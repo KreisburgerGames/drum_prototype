@@ -69,6 +69,7 @@ public class SphereGrow : INarratorAction
     public IEnumerator DoAction(NarratorController controller)
     {
         startSphere?.Invoke();
+        controller.character.SetTrigger("CastSpell");
         yield return null;
     }
 }
