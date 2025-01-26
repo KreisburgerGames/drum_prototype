@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class NarratorController : MonoBehaviour
 {
@@ -22,7 +23,7 @@ public class NarratorController : MonoBehaviour
         Instance = this;
         //character.gameObject.SetActive(false);
         MagicDrumManager.OnRoomSetupComplete += OnRoomSetupComplete;
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
     }
 
     private void OnRoomSetupComplete()
@@ -33,15 +34,18 @@ public class NarratorController : MonoBehaviour
         if(gameObject.activeSelf)StartCoroutine(PlayActions());
     }
 
-    private void OnEnable()
-    {
-        if(isStarted)
-            StartCoroutine(PlayActions());
-    }
+    //private void OnEnable()
+    //{
+    //    if(isStarted)
+    //        StartCoroutine(PlayActions());
+    //}
 
 
     IEnumerator PlayActions()
     {
+
+        yield return new WaitUntil(() => MagicDrumManager.Genre != null);
+
         foreach(var action in data.actions)
         {
             yield return action.DoAction(this);
@@ -171,5 +175,19 @@ public class NarratorWaitForSecondsAction : INarratorAction
     public IEnumerator DoAction(NarratorController controller)
     {
         yield return new WaitForSeconds(seconds);
+    }
+}
+
+
+[System.Serializable]
+public class NarratorUnityEventAction : INarratorAction
+{
+
+    public UnityEvent onEvent;
+
+    public IEnumerator DoAction(NarratorController controller)
+    {
+        onEvent?.Invoke();
+        yield return null;
     }
 }
